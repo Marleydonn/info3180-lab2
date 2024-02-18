@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='./css/app.css')}}"> {% endblock%}
+{% block main %}
+
+<aside>
+<div class = "pic">
+    <div class = "profile image">
+        <img src="{{ url_for('static', filename='Profile_Photo.jpg') }}" alt="Your Image">
+        
+    </div>
+
+    <h2>{{name}}</h2>
+    <p>{{contact}}</p>
+    <p>{{location}}</p>
+    <p>Joined {{date_joined}}</p>
+</div>
+<div class = "second">
+    
+    <div class ='bio'>
+        <p>I am a smart and talented young man who loves website design and development and aspire to have a future in the field. Contact me if you'd like to work together on a new project.
+        </p>
+    </div>
+    
+    <div class="tracking">
+        <div class = "p2">
+            <p class="bold">7</p>
+            <p>Posts</p>
+        </div>
+
+        <div class = "p2">
+            <p class="bold">100</p>
+            <p>Following</p>
+        </div>
+
+        <div class = "p2">
+            <p class="bold">250</p>
+            <p>Followers</p>
+        </div>
+        
+
+    </div>
+
+</div>
+<button type="button" class="btn">Follow</button>
+
+</aside>
+{% endblock %}
